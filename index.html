@@ -11,21 +11,8 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-
-    <title>
-      Frontend Mentor | Newsletter sign-up form with success message
-    </title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Newsletter sign-up</title>
   </head>
   <body>
     <!-- Sign-up form start -->
@@ -66,17 +53,14 @@
     </section>
     <!-- Success message start -->
     <section class="success-section">
-      Thanks for subscribing! A confirmation email has been sent to
-      ash@loremcompany.com. Please open it and click the button inside to
-      confirm your subscription. Dismiss message
+      <img src="./assets/images/icon-success.svg" alt="success" />
+      <h2>Thanks for subscribing!</h2>
+      <p>
+        A confirmation email has been sent to ash@loremcompany.com. Please open
+        it and click the button inside to confirm your subscription.
+      </p>
+      <button class="dismiss">Dismiss message</button>
     </section>
     <!-- Success message end -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
   </body>
 </html>
