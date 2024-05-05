@@ -1,7 +1,52 @@
+:root{
+    --dark-slate-gray: hsl(234, 29%, 20%);
+    --charcol-gray: hsl(235, 18%, 26%);
+    --gray: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+    --tomato: hsl(4, 100%, 67%);
+}
+
 *{
     font-family: "Roboto", sans-serif;
 }
 
+body{
+    background-color: var(--charcol-gray);
+    display: flex;
+    justify-content: center;
+}
+
 .success-section{
     display: none;
+}
+
+.main-section{
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 3em;
+    max-width: 70%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text, .image{
+    width:50%;
+    border: dotted;
+}
+.big-img{
+    width: 100%;
+}
+
+.subscribe, 
+.dissmiss{
+    background-color: var(--dark-slate-gray);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.subscribe:hover, 
+.dissmiss:hover{
+    background-color: var(--tomato);
 }
