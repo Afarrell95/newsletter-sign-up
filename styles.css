@@ -18,10 +18,6 @@ body{
     align-items: center;
 }
 
-.success-section{
-    display: none;
-}
-
 .main-section{
     background-color: var(--white);
     border-radius: 25px;
@@ -94,7 +90,7 @@ label{
 }
 
 .subscribe, 
-.dissmiss{
+.dismiss{
     background-color: var(--dark-slate-gray);
     border: none;
     border-radius: 5px;
@@ -104,11 +100,35 @@ label{
 }
 
 .subscribe:hover, 
-.dissmiss:hover{
+.dismiss:hover{
     background-color: var(--tomato);
     box-shadow: 2px 17px 18px -5px rgba(0,0,0,0.11);
     -webkit-box-shadow: 2px 17px 18px -5px rgba(0,0,0,0.11);
     -moz-box-shadow: 2px 17px 18px -5px rgba(0,0,0,0.11);
 }
+.main-section{
+    display: none;
+}
 
+.success-section{
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 3em;
+    max-width: 30%;
+}
+
+.success-section h2{
+    font-size: 3rem;
+}
+
+.dismiss{
+    border-radius: 5px;
+    margin-top: 1em;
+    padding: 1.2em;
+    min-width: 100%;
+    cursor: pointer;
+    background-color: var(--dark-slate-gray);
+    border: none;
+    color: var(--white)
+}
 /*1100px breaking point*/
