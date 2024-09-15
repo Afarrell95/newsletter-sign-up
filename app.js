@@ -3,7 +3,8 @@ let subscribe = document.querySelector(".subscribe");
 let emailInput = document.querySelector("#email-name");
 let displayName = document.querySelector(".display-name");
 let success = document.querySelector(".success-section");
-let main = document.querySelector("main-section");
+let main = document.querySelector(".main-section");
+let dismiss = document.querySelector(".dismiss");
 
 // Add click event listener to the subscribe button
 subscribe.addEventListener("click", (event) => {
@@ -17,6 +18,10 @@ subscribe.addEventListener("click", (event) => {
   } else {
     alert("Please enter a valid email address."); // Optionally handle invalid email
   }
+});
+
+dismiss.addEventListener("click", () => {
+  window.location.reload();
 });
 
 // Email validation function
