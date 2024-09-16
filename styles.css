@@ -61,6 +61,13 @@ body{
     flex-direction: column;
 }
 
+.form .validation-message{
+    display: none;
+    color: var(--tomato);
+    font-size: .8rem;
+    text-align: right;
+}
+
 #email-name, .subscribe{
     border-radius: 5px;
     margin-top: 1em;
@@ -120,6 +127,7 @@ label{
     border-radius: 25px;
     padding: 3em;
     max-width: 30%;
+    margin-top: 12%;
 }
 
 .success-section h2{
@@ -137,3 +145,9 @@ label{
     color: var(--white)
 }
 /*1100px breaking point*/
+@media screen and (max-width: 1240px){
+/*TODO*/
+/* 
+-mobile responsiveness
+*/
+}

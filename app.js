@@ -5,6 +5,7 @@ let displayName = document.querySelector(".display-name");
 let success = document.querySelector(".success-section");
 let main = document.querySelector(".main-section");
 let dismiss = document.querySelector(".dismiss");
+let validationMessage = document.querySelector(".validation-message");
 
 // Add click event listener to the subscribe button
 subscribe.addEventListener("click", (event) => {
@@ -15,8 +16,11 @@ subscribe.addEventListener("click", (event) => {
   if (isValidEmail(emailValue)) {
     success.style.display = "block";
     main.style.display = "none";
+    displayName.innerHTML = emailInput.value;
   } else {
-    alert("Please enter a valid email address."); // Optionally handle invalid email
+    emailInput.style.borderColor = "hsl(4, 50%, 67%)";
+    emailInput.style.backgroundColor = "hsl(4, 100%, 95%)";
+    validationMessage.style.display = "block";
   }
 });
 
