@@ -1,18 +1,15 @@
-// Select elements
 let subscribe = document.querySelector(".subscribe");
 let emailInput = document.querySelector("#email-name");
+let emailPlaceholder = document.querySelector("input[type=email]");
 let displayName = document.querySelector(".display-name");
 let success = document.querySelector(".success-section");
 let main = document.querySelector(".main-section");
 let dismiss = document.querySelector(".dismiss");
 let validationMessage = document.querySelector(".validation-message");
 
-// Add click event listener to the subscribe button
 subscribe.addEventListener("click", (event) => {
   event.preventDefault();
-  let emailValue = emailInput.value.trim(); // Get the value from the input and trim whitespace
-
-  // Validate email and show/hide sections accordingly
+  let emailValue = emailInput.value.trim();
   if (isValidEmail(emailValue)) {
     success.style.display = "block";
     main.style.display = "none";
@@ -20,6 +17,7 @@ subscribe.addEventListener("click", (event) => {
   } else {
     emailInput.style.borderColor = "hsl(4, 50%, 67%)";
     emailInput.style.backgroundColor = "hsl(4, 100%, 95%)";
+    emailInput.classList.add("invalid");
     validationMessage.style.display = "block";
   }
 });
@@ -28,7 +26,6 @@ dismiss.addEventListener("click", () => {
   window.location.reload();
 });
 
-// Email validation function
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
